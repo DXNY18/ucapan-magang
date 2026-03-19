@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffe6f2 0%, #ffcccb 100%);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.main-container {
+  max-width: 90vw;
+  max-width: 600px;
+  width: 100%;
+  padding: clamp(20px, 5vw, 40px);
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+button {
+  padding: clamp(12px, 4vw, 18px) clamp(25px, 6vw, 40px);
+  border-radius: 30px;
+  background: linear-gradient(45deg, #ff69b4, #ffc0cb);
+  border: none;
+  font-size: clamp(1rem, 4vw, 1.3rem);
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4);
+  transition: all 0.3s ease;
+  margin: 20px 0;
+}
+
+button:hover, button:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 105, 180, 0.6);
+}
+
+input {
+  padding: clamp(12px, 4vw, 18px);
+  border-radius: 20px;
+  border: 3px solid #ffb6c1;
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  width: min(90%, 350px);
+  margin: 15px auto;
+  display: block;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+h1, h2 {
+  margin: 25px 0;
+  line-height: 1.2;
+}
+
+/* Typing Animation Containers - Perfect Centering */
+#hero-title, #ucapan-title, #side-title {
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 auto;
+  vertical-align: middle;
+  animation: typing 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  max-width: 100%;
+}
+
+#hero-title {
+  font-size: clamp(2rem, 8vw, 3.5rem);
+}
+
+#ucapan-title {
+  font-size: clamp(1.8rem, 7vw, 2.8rem);
+}
+
+#side-title {
+  font-size: clamp(1.3rem, 5vw, 2rem);
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+/* Hide ALL cursors */
+#cursor, #ucapan-cursor, #side-cursor {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+#typing-text, #ucapan-text, #side-text {
+  border-right: none !important;
+}
+
+/* Mobile Perfect Centering */
+@media (max-width: 600px) {
+  body {
+    padding: clamp(10px, 4vw, 25px);
+  }
+  
+  .main-container {
+    padding: clamp(15px, 4vw, 30px);
+  }
+  
+  #hero-title, #ucapan-title, #side-title {
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+    animation-duration: 2.5s;
+  }
+}
+
+/* Portrait phones */
+@media (max-height: 700px) and (orientation: portrait) {
+  body {
+    justify-content: flex-start;
+    padding-top: clamp(20px, 8vh, 50px);
+  }
+  
+  .main-container {
+    max-width: 95vw;
+  }
+}
+
+/* Landscape phones */
+@media (max-width: 900px) and (orientation: landscape) {
+  body {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .main-container {
+    max-width: 95vw;
+    padding: clamp(10px, 3vw, 25px);
+  }
+}

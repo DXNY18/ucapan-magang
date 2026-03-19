@@ -62,10 +62,10 @@ function showPesan() {
   modal.innerHTML = `
     <h3 style="color:#ff1493;text-align:center;font-size:clamp(1.3rem,6vw,1.7rem);margin:0 0 20px 0;font-weight:bold">💖 Pesan Rahasia 💖</h3>
     <p style="font-size:clamp(1rem,4.5vw,1.25rem);line-height:1.7;margin:0 0 30px 0;color:#444;text-align:justify">
-      Terima kasih ya kamu telah melewati masa-masa yang lumayan berat saat magang maupun aku gak tau beratnya seperti apa karena aku belum merasakannya, tapi kamu salah satu orang terhebat yang pernah aku ketahui karena ga semua orang bisa seperti kamu. Dan sepertinya aku tidak salah menyukai seseorang yaitu kamu <strong style="color:#ff1493">${nama}</strong>. Maaf ya semisalnya aku selalu bikin risih 💕
+      Terima kasih ya kamu telah melewati masa-masa yang lumayan berat saat magang maupun aku gak tau beratnya seperti apa karena aku belum merasakannya, tapi kamu salah satu orang terhebat yang pernah aku ketahui karena ga semua orang bisa seperti kamu. Dan sepertinya aku tidak salah menyukai seseorang yaitu kamu <strong style="color:#ff1493">${nama}</strong>. Maaf ya semisalnya aku selalu bikin risih 
     </p>
     <div style="text-align:center">
-      <button onclick="tutupPesan()" style="padding:16px 40px;font-size:1.15rem;font-weight:bold;background:linear-gradient(45deg,#ff69b4,#ff1493);border:none;border-radius:35px;color:white;cursor:pointer;box-shadow:0 10px 30px rgba(255,105,180,0.5);transition:all 0.3s ease">✨ Tutup 💖</button>
+      <button onclick="tutupPesan()" style="padding:16px 40px;font-size:1.15rem;font-weight:bold;background:linear-gradient(45deg,#ff69b4,#ff1493);border:none;border-radius:35px;color:white;cursor:pointer;box-shadow:0 10px 30px rgba(255,105,180,0.5);transition:all 0.3s ease">✨ Tutup </button>
     </div>
   `;
   
@@ -125,7 +125,7 @@ function askPesan() {
   buttonsDiv.style.transform = 'translate(-50%, -50%)';
   
   const iyaButton = document.createElement('button');
-  iyaButton.innerHTML = '✅ Iya 💕';
+  iyaButton.innerHTML = '✅ Iya ';
   iyaButton.style.background = 'linear-gradient(45deg, #ff69b4, #ff1493)';
   iyaButton.onclick = showPesan;
   

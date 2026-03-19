@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Aesthetic';
+  src: local('𝒜𝒸𝒽𝒾𝓁𝓁𝒾𝓃𝑔'), local('Great Vibes'), url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+}
+
+.main-container h1, h2, h3, #ucapan-title, #side-title, #typing-text, button {
+  font-family: 'Dancing Script', '𝒜𝑒𝓈𝓉𝒉𝑒𝓉𝒾𝒸', cursive !important;
+}
+
 body {
   margin: 0;
   padding: 0;
